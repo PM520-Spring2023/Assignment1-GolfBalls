@@ -6,11 +6,12 @@ This assignment asks you the following:
 Allan Rossman used to live along a golf course and collected the golf balls that landed in his yard. Most of these golf balls had a number on them. Allan tallied the numbers on the first 500 golf balls that landed in his yard one summer.
 
 Specifically. he collected the following data:
-137  golf balls numbered 1
-138  golf balls numbered 2
-107  golf balls numbered 3
-104  golf balls numbered 4
-14 "others" (Either with a different number, or no number at all. We will ignore these other balls for the purposes of this question.)
+
+    137  golf balls numbered 1
+    138  golf balls numbered 2
+    107  golf balls numbered 3
+    104  golf balls numbered 4
+    14 "others" (Either with a different number, or no number at all. We will ignore these other balls for the purposes of this question.)
 
 Question: What is the distribution of these numbers?
 In particular, are the numbers 1, 2, 3, and 4 equally likely?
@@ -22,6 +23,13 @@ Here's the pseudocode. Your job is to flesh it out, run it for at least 3 test s
 
 ```{r pseudocode}
 # Pseudocode for the golf ball problem in assignment 1
+
+# Here's a function that returns a set of golf balls numbers from a uniform distribution 
+sample_golf_balls <- function(sample_size, num_ball_types) {
+  supposedPopulation <- 1:num_ball_types
+  sample_balls <- sample(supposedPopulation, size=sample_size, replace=TRUE) 
+  return (sample_balls)
+}
 
 # Do the following repeatedly, for each test statistic that you use.
 
